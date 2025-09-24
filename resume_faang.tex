@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{resume_styles}
+
+% Настройка полей
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% Настройка шрифтов
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\begin{document}
+
+% Заголовок резюме
+\resumeheader{ВАШЕ ИМЯ}{Frontend-разработчик}
+{\resumelink{mailto:your.email@example.com}{your.email@example.com} \quad
+\resumelink{tel:+7-999-123-45-67}{+7 (999) 123-45-67} \quad
+\resumelink{https://github.com/yourusername}{github.com/yourusername} \quad
+\resumelink{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile}}
+{Москва, Россия}
+
+% ТЕХНИЧЕСКИЕ НАВЫКИ
+\section{ТЕХНИЧЕСКИЕ НАВЫКИ}
+
+\skillblock{Языки программирования}{JavaScript, TypeScript, Python, HTML5, CSS3, SQL}
+\skillblock{Фреймворки \& Библиотеки}{React, Vue.js, AngularJS, React Native, Redux, Chart.js, D3.js}
+\skillblock{Инструменты разработки}{Git, GitHub, GitLab, Webpack, Vite, Jest, React Testing Library}
+\skillblock{CI/CD \& DevOps}{GitLab CI, CI/CD, REST API, gRPC, HTTP, HTTPS}
+\skillblock{Дизайн \& UX}{UI Design, UX, Верстка, Лендинг, SaaS}
+\skillblock{Операционные системы}{Linux}
+
+% ОПЫТ РАБОТЫ
+\section{ОПЫТ РАБОТЫ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Frontend-разработчик}{KAMAZ Digital, Москва}{\daterange{октябрь 2024 -- сентябрь 2025}}{}
+\resumeitem{Разработка системы управления логистическими операциями с оптимизацией интерфейса}
+\resumeitem{Провела комплексный рефакторинг ключевого модуля «Обработчик маршрутов» с применением мемоизации и ленивой загрузки данных}
+\resumeitem{Результат: сокращение времени отклика пользовательского интерфейса на 40\%, повышение удовлетворенности операторов-диспетчеров на 29\%}
+\resumeitem{Разработала с нуля интерактивный дашборд для анализа эффективности работы водителей с использованием Chart.js и D3.js}
+\resumeitem{Результат: предоставила менеджерам инструмент для принятия решений на основе данных, что повысило точность планирования и эффективность маршрутизации}
+\resumeitem{Инициировала интеграцию автоматического тестирования (Jest, React Testing Library) в CI/CD pipeline}
+\resumeitem{Результат: снижение количества дефектов в production на 37\%, сокращение времени на ручное тестирование на 25\%}
+\resumeitem{\techlist{Технологии: JavaScript, TypeScript, Vue.js, React, HTML5, CSS3, Chart.js, Jest, CI/CD, REST}}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Frontend-разработчик}{Molva Group, Москва}{\daterange{февраль 2024 -- октябрь 2024}}{}
+\resumeitem{Разработка HR-платформы для массового найма с созданием дизайн-системы}
+\resumeitem{Разработала библиотеку унифицированных UI-компонентов (более 30 элементов), обеспечив единый визуальный стиль и стандартизацию интерфейсов}
+\resumeitem{Результат: ускорение разработки новых функций на 30\%, снижение количества несогласованных UI-решений}
+\resumeitem{Обнаружила и устранила критическую уязвимость в процессе авторизации, провела тестирование сценариев безопасности}
+\resumeitem{Результат: довела покрытие тестами модуля до 93\%, исключив риск повторного возникновения уязвимости}
+\resumeitem{Реализовала динамическую систему форм с валидацией (React Hook Form, Yup)}
+\resumeitem{Результат: сокращение ошибок заполнения на 25\%, снижение нагрузки на службу поддержки}
+\resumeitem{\techlist{Технологии: JavaScript, TypeScript, React, Vue.js, Vite, React Hooks, UI Design, Git, CSS3, HTML5}}
+\end{itemize}
+
+% ОБРАЗОВАНИЕ
+\section{ОБРАЗОВАНИЕ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Бакалавр}{Национальный исследовательский технологический университет «МИСИС», Москва}{\daterange{2022 -- н.в.}}{}
+\resumeitem{Специальность: Информатика и вычислительная техника}
+\resumeitem{Профиль: Программная и системная инженерия}
+\resumeitem{Степень: Бакалавр}
+\end{itemize}
+
+% ПОВЫШЕНИЕ КВАЛИФИКАЦИИ
+\section{ПОВЫШЕНИЕ КВАЛИФИКАЦИИ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumeitem{Курс: Клиент-серверные приложения — проектирование и разработка}
+\resumeitem{Направление: Программная и системная инженерия}
+\end{itemize}
+
+
+% ЯЗЫКИ
+\section{ЯЗЫКИ}
+
+\skillblock{Русский}{Родной}
+\skillblock{Английский}{B2 — Upper-Intermediate}
+
+\end{document}

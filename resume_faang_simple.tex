@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{resume_styles}
+
+% Настройка полей
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% Настройка шрифтов
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+
+\begin{document}
+
+% Заголовок резюме
+\resumeheader{ВАШЕ ИМЯ}{Frontend-разработчик}
+{\resumelink{mailto:your.email@example.com}{your.email@example.com} \quad
+\resumelink{tel:+7-999-123-45-67}{+7 (999) 123-45-67} \quad
+\resumelink{https://github.com/yourusername}{github.com/yourusername} \quad
+\resumelink{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile}}
+{Москва, Россия}
+
+% ОПЫТ РАБОТЫ
+\section{ОПЫТ РАБОТЫ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Senior Software Engineer}{Яндекс, Москва}{\daterange{2021 -- настоящее время}}{}
+\resumeitem{Разработал и внедрил микросервисную архитектуру для обработки 10M+ запросов в день}
+\resumeitem{Оптимизировал производительность системы на 40\% через кэширование и алгоритмические улучшения}
+\resumeitem{Руководил командой из 5 разработчиков, внедрил CI/CD пайплайны}
+\resumeitem{\techlist{Технологии: Python, Go, Kubernetes, PostgreSQL, Redis, Docker}}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Software Engineer}{Google, Москва}{\daterange{2019 -- 2021}}{}
+\resumeitem{Разрабатывал backend-системы для Google Search с использованием C++ и Java}
+\resumeitem{Участвовал в проектах машинного обучения для ранжирования результатов поиска}
+\resumeitem{Создал инструменты для мониторинга и отладки распределенных систем}
+\resumeitem{\techlist{Технологии: C++, Java, Python, TensorFlow, BigQuery, Protocol Buffers}}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Software Engineer Intern}{Microsoft, Москва}{\daterange{2018 -- 2019}}{}
+\resumeitem{Разработал модуль для Azure Cloud Services на C\#}
+\resumeitem{Создал автоматизированные тесты, повысив покрытие кода до 90\%}
+\resumeitem{Участвовал в code review и agile-процессах разработки}
+\resumeitem{\techlist{Технологии: C\#, .NET Core, Azure, SQL Server, PowerShell}}
+\end{itemize}
+
+% ОБРАЗОВАНИЕ
+\section{ОБРАЗОВАНИЕ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Магистр компьютерных наук}{МГУ им. М.В. Ломоносова}{\daterange{2016 -- 2018}}{}
+\resumeitem{Специализация: Машинное обучение и анализ данных}
+\resumeitem{Средний балл: 4.8/5.0}
+\resumeitem{Дипломная работа: "Оптимизация алгоритмов ранжирования в поисковых системах"}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Бакалавр прикладной математики}{МГУ им. М.В. Ломоносова}{\daterange{2012 -- 2016}}{}
+\resumeitem{Средний балл: 4.7/5.0}
+\resumeitem{Курсовая работа: "Алгоритмы сортировки и их сложность"}
+\end{itemize}
+
+% ТЕХНИЧЕСКИЕ НАВЫКИ
+\section{ТЕХНИЧЕСКИЕ НАВЫКИ}
+
+\skillblock{Языки программирования}{JavaScript, TypeScript, Python, HTML5, CSS3, SQL}
+\skillblock{Фреймворки \& Библиотеки}{React, Vue.js, AngularJS, React Native, Redux, Chart.js, D3.js}
+\skillblock{Инструменты разработки}{Git, GitHub, GitLab, Webpack, Vite, Jest, React Testing Library}
+\skillblock{CI/CD \& DevOps}{GitLab CI, CI/CD, REST API, gRPC, HTTP, HTTPS}
+\skillblock{Дизайн \& UX}{UI Design, UX, Верстка, Лендинг, SaaS}
+\skillblock{Операционные системы}{Linux}
+
+% ПРОЕКТЫ
+\section{КЛЮЧЕВЫЕ ПРОЕКТЫ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumeproject{Система рекомендаций для e-commerce}{\daterange{2022 -- 2023}}{}
+\resumeitem{Разработал ML-систему рекомендаций, увеличившую конверсию на 25\%}
+\resumeitem{Использовал collaborative filtering и deep learning подходы}
+\resumeitem{Система обрабатывает 1M+ пользователей и 10M+ товаров}
+\resumeitem{\techlist{Технологии: Python, TensorFlow, Apache Spark, Kafka, Redis}}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumeproject{Микросервисная платформа для финтех}{\daterange{2021 -- 2022}}{}
+\resumeitem{Создал платформу для обработки финансовых транзакций с высокой нагрузкой}
+\resumeitem{Обеспечил 99.9\% uptime и соответствие PCI DSS стандартам}
+\resumeitem{Внедрил мониторинг и алертинг для всех критических компонентов}
+\resumeitem{\techlist{Технологии: Go, gRPC, PostgreSQL, Kafka, Prometheus, Kubernetes}}
+\end{itemize}
+
+% ДОСТИЖЕНИЯ
+\section{ДОСТИЖЕНИЯ}
+
+\begin{itemize}[leftmargin=0pt]
+\resumeitem{Получил патент на алгоритм оптимизации поисковых запросов (2023)}
+\resumeitem{Выступал с докладом на конференции "Highload++" (2022)}
+\resumeitem{Победитель хакатона "AI for Good" от Google (2021)}
+\resumeitem{Сертификаты: AWS Solutions Architect, Google Cloud Professional Developer}
+\resumeitem{Участие в open-source проектах: 500+ коммитов в популярных репозиториях}
+\end{itemize}
+
+% ЯЗЫКИ
+\section{ЯЗЫКИ}
+
+\skillblock{Русский}{Родной}
+\skillblock{Английский}{Продвинутый (TOEFL 110, опыт работы в международных командах)}
+\skillblock{Немецкий}{Базовый (A2)}
+
+\end{document}

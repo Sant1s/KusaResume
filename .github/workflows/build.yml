@@ -1,0 +1,40 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup LaTeX
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: resume.tex
+        latex_compiler: xelatex
+        args: -interaction=nonstopmode -halt-on-error
+    
+    - name: Build all versions
+      run: |
+        make ci
+    
+    - name: Upload PDF artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume-pdfs
+        path: "*.pdf"
+    
+    - name: Create package
+      run: make package
+    
+    - name: Upload package
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume-package
+        path: "resume-package.tar.gz"

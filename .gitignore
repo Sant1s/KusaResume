@@ -1,0 +1,80 @@
+# LaTeX временные файлы
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.tdo
+*.toc
+*.figlist
+*.makefile
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.auxlock
+
+# PDF файлы (опционально - раскомментируйте если не хотите коммитить PDF)
+# *.pdf
+
+# Архивы
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Временные папки
+dist/
+build/
+temp/
+tmp/
+
+# Системные файлы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# LaTeX пакеты (локальные)
+texmf/
+
+# Логи компиляции
+*.log
+
+# Backup файлы
+*.bak
+*.backup
+*~
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~

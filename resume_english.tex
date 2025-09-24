@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{resume_styles}
+
+% Page setup
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% Font setup
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\begin{document}
+
+% Resume header
+\resumeheader{YOUR NAME}{Frontend Developer}
+{\resumelink{mailto:your.email@example.com}{your.email@example.com} \quad
+\resumelink{tel:+7-999-123-45-67}{+7 (999) 123-45-67} \quad
+\resumelink{https://github.com/yourusername}{github.com/yourusername} \quad
+\resumelink{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile}}
+{Moscow, Russia}
+
+% TECHNICAL SKILLS
+\section{TECHNICAL SKILLS}
+
+\skillblock{Programming Languages}{JavaScript, TypeScript, Python, HTML5, CSS3, SQL}
+\skillblock{Frameworks \& Libraries}{React, Vue.js, AngularJS, React Native, Redux, Chart.js, D3.js}
+\skillblock{Development Tools}{Git, GitHub, GitLab, Webpack, Vite, Jest, React Testing Library}
+\skillblock{CI/CD \& DevOps}{GitLab CI, CI/CD, REST API, gRPC, HTTP, HTTPS}
+\skillblock{Design \& UX}{UI Design, UX, Frontend, Landing, SaaS}
+\skillblock{Operating Systems}{Linux}
+
+% WORK EXPERIENCE
+\section{WORK EXPERIENCE}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Frontend Developer}{KAMAZ Digital, Moscow}{\daterange{October 2024 -- September 2025}}{}
+\resumeitem{Development of logistics operations management system with interface optimization}
+\resumeitem{Conducted comprehensive refactoring of the key "Route Handler" module using memoization and lazy data loading}
+\resumeitem{Result: reduced user interface response time by 40\%, increased dispatcher satisfaction by 29\% (based on internal UX survey)}
+\resumeitem{Developed from scratch an interactive dashboard for analyzing driver efficiency using Chart.js and D3.js}
+\resumeitem{Result: provided managers with a data-driven decision-making tool, improving planning accuracy and routing efficiency}
+\resumeitem{Initiated integration of automated testing (Jest, React Testing Library) into CI/CD pipeline}
+\resumeitem{Result: reduced production defects by 37\%, cut manual testing time by 25\%}
+\resumeitem{\techlist{Technologies: JavaScript, TypeScript, Vue.js, React, HTML5, CSS3, Chart.js, Jest, CI/CD, REST}}
+\end{itemize}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Frontend Developer}{Molva Group, Moscow}{\daterange{February 2024 -- October 2024}}{}
+\resumeitem{Development of HR platform for mass hiring with design system creation}
+\resumeitem{Developed unified UI component library (30+ elements), ensuring consistent visual style and interface standardization}
+\resumeitem{Result: accelerated new feature development by 30\%, reduced inconsistent UI solutions}
+\resumeitem{Discovered and fixed critical authorization vulnerability, conducted security scenario testing}
+\resumeitem{Result: achieved 93\% test coverage for the module, eliminating risk of vulnerability recurrence}
+\resumeitem{Implemented dynamic form system with validation (React Hook Form, Yup)}
+\resumeitem{Result: reduced form filling errors by 25\%, decreased support team workload}
+\resumeitem{\techlist{Technologies: JavaScript, TypeScript, React, Vue.js, Vite, React Hooks, UI Design, Git, CSS3, HTML5}}
+\end{itemize}
+
+% EDUCATION
+\section{EDUCATION}
+
+\begin{itemize}[leftmargin=0pt]
+\resumesubheading{Bachelor}{National University of Science and Technology «MISIS», Moscow}{\daterange{2022 -- Present}}{}
+\resumeitem{Specialty: Computer Science and Engineering}
+\resumeitem{Profile: Software and Systems Engineering}
+\resumeitem{Degree: Bachelor}
+\end{itemize}
+
+% PROFESSIONAL DEVELOPMENT
+\section{PROFESSIONAL DEVELOPMENT}
+
+\begin{itemize}[leftmargin=0pt]
+\resumeitem{Course: Client-Server Applications — Design and Development}
+\resumeitem{Direction: Software and Systems Engineering}
+\end{itemize}
+
+
+% LANGUAGES
+\section{LANGUAGES}
+
+\skillblock{Russian}{Native}
+\skillblock{English}{B2 — Upper-Intermediate}
+
+\end{document}

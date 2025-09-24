@@ -1,0 +1,113 @@
+% Стили для резюме в стиле FAANG
+\ProvidesPackage{resume_styles}
+
+% Цветовая схема FAANG
+\definecolor{faangblue}{RGB}{0,102,204}
+\definecolor{faangdark}{RGB}{51,51,51}
+\definecolor{faanglight}{RGB}{245,245,245}
+\definecolor{faangaccent}{RGB}{255,140,0}
+
+% Настройка гиперссылок
+\hypersetup{
+    colorlinks=true,
+    linkcolor=faangblue,
+    urlcolor=faangblue,
+    citecolor=faangdark,
+    pdfborder={0 0 0}
+}
+
+% Стилизация заголовков секций
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}{}
+  [\titlerule[1pt]]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}{0em}{}
+
+% Стилизация списков
+\setlist[itemize]{
+    leftmargin=0pt,
+    itemindent=0pt,
+    parsep=0pt,
+    topsep=2pt,
+    partopsep=0pt
+}
+
+% Стилизация таблиц
+\renewcommand{\arraystretch}{1.2}
+
+% Кастомные команды для резюме
+\newcommand{\resumeitem}[1]{\item\small{#1}}
+\newcommand{\resumesubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumesubentry}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeproject}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3} & \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Команда для навыков
+\newcommand{\skillitem}[2]{
+    \item \textbf{#1:} #2
+}
+
+% Команда для контактов
+\newcommand{\contactitem}[1]{
+    \item \textbf{#1}
+}
+
+% Настройка отступов
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Стилизация дат
+\newcommand{\daterange}[1]{\textit{\small #1}}
+
+% Стилизация технологий
+\newcommand{\techlist}[1]{\textit{\small #1}}
+
+% Команда для создания разделителя
+\newcommand{\resumesection}[1]{
+  \section*{#1}
+  \vspace{-5pt}
+}
+
+% Стилизация заголовка
+\newcommand{\resumeheader}[4]{
+    \begin{center}
+        {\Huge\bfseries #1}\\[0.5cm]
+        {\large #2}\\[0.3cm]
+        #3 \\[0.2cm]
+        #4
+    \end{center}
+    \vspace{0.5cm}
+}
+
+% Стилизация ссылок
+\newcommand{\resumelink}[2]{\href{#1}{#2}}
+
+% Команда для создания блока с навыками
+\newcommand{\skillblock}[2]{
+    \begin{tabularx}{\textwidth}{@{}lX@{}}
+        \textbf{#1:} & #2 \\
+    \end{tabularx}
+}
+
+\endinput
