@@ -20,7 +20,7 @@
 \titleformat{\section}
   {\large\bfseries\uppercase}
   {}{0em}{}
-  [\titlerule[1pt]]
+  [\rule{\textwidth}{1pt}]
 
 \titleformat{\subsection}
   {\normalsize\bfseries}
@@ -41,11 +41,11 @@
 % Кастомные команды для резюме
 \newcommand{\resumeitem}[1]{\item\small{#1}}
 \newcommand{\resumesubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{8pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+      \textbf{#2} & \textit{\small#3} \\
+      \textit{\small#1} & \textit{\small #4} \\
+    \end{tabular*}\vspace{2pt}
 }
 
 \newcommand{\resumesubentry}[2]{
@@ -108,6 +108,23 @@
     \begin{tabularx}{\textwidth}{@{}lX@{}}
         \textbf{#1:} & #2 \\
     \end{tabularx}
+}
+
+% Команда для создания тонкой разделительной линии
+\newcommand{\resumedivider}{
+    \vspace{8pt}
+    \rule{0.3\textwidth}{0.5pt}
+    \vspace{8pt}
+}
+
+% Команда для выделения результатов
+\newcommand{\resumeresult}[1]{
+    \item \textbf{Результат:} #1
+}
+
+% Команда для выделения результатов на английском
+\newcommand{\resumeresulten}[1]{
+    \item \textbf{Result:} #1
 }
 
 \endinput

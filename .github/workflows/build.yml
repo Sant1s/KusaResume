@@ -25,7 +25,7 @@ jobs:
         make ci
     
     - name: Upload PDF artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: resume-pdfs
         path: "*.pdf"
@@ -34,7 +34,7 @@ jobs:
       run: make package
     
     - name: Upload package
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: resume-package
         path: "resume-package.tar.gz"

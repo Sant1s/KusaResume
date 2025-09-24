@@ -1,9 +1,8 @@
 # Makefile для компиляции LaTeX резюме
 
 # Основные файлы
-MAIN_RESUME = resume.tex
-FAANG_RESUME = resume_faang_simple.tex
-ENGLISH_RESUME = resume_english_simple.tex
+RUSSIAN_RESUME = resume_russian.tex
+ENGLISH_RESUME = resume_english.tex
 STYLES = resume_styles.sty
 
 # Компилятор LaTeX
@@ -17,17 +16,12 @@ LATEX_FLAGS = -interaction=nonstopmode -halt-on-error
 .PHONY: all clean help pdf
 
 # Компиляция всех версий резюме
-all: resume.pdf resume_faang.pdf resume_english.pdf
+all: resume_russian.pdf resume_english.pdf
 
-# Компиляция основной версии резюме
-resume.pdf: $(MAIN_RESUME)
-	$(LATEX) $(LATEX_FLAGS) $(MAIN_RESUME)
-	$(LATEX) $(LATEX_FLAGS) $(MAIN_RESUME)
-
-# Компиляция FAANG версии резюме
-resume_faang.pdf: $(FAANG_RESUME) $(STYLES)
-	$(LATEX) $(LATEX_FLAGS) $(FAANG_RESUME)
-	$(LATEX) $(LATEX_FLAGS) $(FAANG_RESUME)
+# Компиляция русской версии резюме
+resume_russian.pdf: $(RUSSIAN_RESUME) $(STYLES)
+	$(LATEX) $(LATEX_FLAGS) $(RUSSIAN_RESUME)
+	$(LATEX) $(LATEX_FLAGS) $(RUSSIAN_RESUME)
 
 # Компиляция английской версии резюме
 resume_english.pdf: $(ENGLISH_RESUME) $(STYLES)
@@ -57,8 +51,7 @@ help:
 	@echo ""
 	@echo "Компиляция резюме:"
 	@echo "  make all              - Скомпилировать все версии резюме"
-	@echo "  make resume.pdf       - Скомпилировать основную версию"
-	@echo "  make resume_faang.pdf - Скомпилировать FAANG версию"
+	@echo "  make resume_russian.pdf - Скомпилировать русскую версию"
 	@echo "  make resume_english.pdf - Скомпилировать английскую версию"
 	@echo "  make quick            - Быстрая компиляция всех версий"
 	@echo "  make watch            - Автоматическая компиляция при изменениях"
@@ -117,6 +110,7 @@ else
 	@echo "Неподдерживаемая ОС: $(UNAME_S)"; \
 	echo "Установите TeX Live вручную с https://www.tug.org/texlive/"; \
 fi
+endif
 
 # Установка минимальных зависимостей
 install-minimal:
@@ -146,14 +140,13 @@ setup: check-deps
 
 # Быстрая компиляция (однократная)
 quick:
-	$(LATEX) $(LATEX_FLAGS) $(MAIN_RESUME)
-	$(LATEX) $(LATEX_FLAGS) $(FAANG_RESUME)
+	$(LATEX) $(LATEX_FLAGS) $(RUSSIAN_RESUME)
 	$(LATEX) $(LATEX_FLAGS) $(ENGLISH_RESUME)
 
 # Компиляция с отслеживанием изменений (требует latexmk)
 watch:
 	@if command -v latexmk >/dev/null 2>&1; then \
-		latexmk -pvc -xelatex $(MAIN_RESUME); \
+		latexmk -pvc -xelatex $(RUSSIAN_RESUME); \
 	else \
 		echo "latexmk не найден. Установите его для автоматической компиляции."; \
 	fi
@@ -161,8 +154,7 @@ watch:
 # Компиляция для CI/CD (без интерактивного режима)
 ci: check-deps
 	@echo "Компиляция для CI/CD..."
-	$(LATEX) -interaction=batchmode -halt-on-error $(MAIN_RESUME)
-	$(LATEX) -interaction=batchmode -halt-on-error $(FAANG_RESUME)
+	$(LATEX) -interaction=batchmode -halt-on-error $(RUSSIAN_RESUME)
 	$(LATEX) -interaction=batchmode -halt-on-error $(ENGLISH_RESUME)
 	@echo "Компиляция завершена."
 
